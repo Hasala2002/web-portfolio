@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+@import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
+
+html, body {
+    height: 100%;
+    margin: 0px;
+    background-image: url(maxresdefault.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    overflow-x: hidden;
+    background-color: rgb(75, 151, 119) ;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'liga';
+}
+
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-40 { font-size: 40px; }
+
+.material-icons.social{
+  font-size: 40px;
+  color: white;
+  display: inline-block;
+}
+
+.material-icons.logo { 
+  position: relative;
+  font-size: 40px; 
+  flex: 1;
+  color: white;
+  margin: 10px;
+  animation: logoanim 2s infinite;
+  /* animation-timing-function: ease; */
+}
+
+@keyframes logoanim{
+  0%{
+    left: 1%;
+  }
+  50%{
+    left: 0%;
+  }
+  100%{
+    left: 1%;
+  }
+}
+.material-icons.btn { 
+  font-size: 40px; 
+  flex: 1;
+  color: white;
+  top: -10%;
+  margin: 10px;
+  transition: 0.1s ease;
+  transform-origin: center center;
+}
+
+.bod{
+    background-color: rgba(52, 104, 82, 0.8);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.header{
+        height: 10%;
+        width: 100%;
+        z-index: 1;
+        margin: 0;
+        background-color: rgba(255, 255, 255, 0.068);
+        display: inline-flex;
+        align-items: center;
+        vertical-align: middle;
+        justify-content: space-between;
+}
+
+.title{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    font-weight: 500;
+    color: white;
+    flex: 25;
+}
+
+
+.dropdown{
+  width: 300px;
+  height: 0px;
+  float: right;
+  background-color: rgba(0, 128, 128, 0.795);
+  flex: 1 0 100%;
+  transition: 1s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.box{
+  margin: 5px;
+  width: 95%;
+  height: 110px;
+  flex: auto;
+  display: flex;
+  flex-direction: row;
+}
+
+.boxin{
+  flex: auto;
+  /* background-color: rgba(255, 255, 255, 0.151); */
+  margin: 5px;
+  height: 0px;
+  width: 100px;
+  animation-duration: 1s ease;
+  display: flex;
+  align-items: center;
+  vertical-align: middle;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.fab{
+  font-size: 0px;
+  color: white;
+  opacity: 0;
+}
+
+.fas{
+  font-size: 0px;
+  color: white;
+  opacity: 0;
+}
+
+.fab:hover{color:  rgba(88, 194, 150, 1); transition: 0.5s;}
+.fas:hover{color:  rgba(88, 194, 150, 1); transition: 0.5s;}
+ 
+  
+[data-tooltip] {
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+  transition: 1s;
+}
+
+/* Hide the tooltip content by default */
+[data-tooltip]:before,
+[data-tooltip]:after {
+  visibility: hidden;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Position tooltip above the element */
+[data-tooltip]:before {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-bottom: 5px;
+  margin-left: -80px;
+  padding: 7px;
+  width: 160px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #000;
+  background-color: hsla(0, 0%, 20%, 0.9);
+  color: #fff;
+  content: attr(data-tooltip);
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+/* Triangle hack to make tooltip look like a speech bubble */
+[data-tooltip]:after {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  width: 0;
+  border-top: 5px solid #000;
+  border-top: 5px solid hsla(0, 0%, 20%, 0.9);
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  content: " ";
+  font-size: 0;
+  line-height: 0;
+}
+
+/* Show tooltip content on hover */
+[data-tooltip]:hover:before,
+[data-tooltip]:hover:after {
+  visibility: visible;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+
+
+
+
