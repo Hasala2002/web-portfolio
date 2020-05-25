@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
 @import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
+@import url(https://fonts.googleapis.com/css?family=Electrolize);
 
 html, body {
     height: 100%;
@@ -71,12 +72,13 @@ html, body {
   margin: 10px;
   transition: 0.1s ease;
   transform-origin: center center;
+  margin-right: 20px;
 }
 
 .bod{
     background-color: rgba(52, 104, 82, 0.8);
     width: 100%;
-    height: 100%;
+    height: auto;
     display: flex;
     flex-direction: column;
 }
@@ -91,32 +93,52 @@ html, body {
         align-items: center;
         vertical-align: middle;
         justify-content: space-between;
+        position: sticky;
 }
 
 .title{
-    font-family: 'Montserrat', sans-serif;
+  font-family: 'Electrolize';
     font-size: 30px;
-    font-weight: 500;
+    font-weight: 600;
     color: white;
     flex: 25;
 }
 
 .name{
-  font-family: 'Montserrat', sans-serif;
+  opacity: 0;
+  font-family: 'Electrolize';
   font-size: 30px;
-  font-weight: 500;
+  font-weight: 600;
   color: white;
   flex: 3;
   align-items: center;
   margin-top: 10px;
+  animation:opac 0.5s;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
   /* z-index: -9; */
   /* background-color: rgba(0, 128, 128, 0.795); */
 }
 
 .nameprof{
-  font-family: 'Montserrat', sans-serif;
+  opacity: 0;
+  font-family: 'Electrolize';
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 600;
+  color: white;
+  flex: 3;
+  margin-top: 0px;
+  align-items: center;
+  animation:opac 0.5s;
+  animation-fill-mode: forwards;
+  animation-delay: 1.5s;
+  /* background-color: rgba(0, 128, 128, 0.795); */
+}
+
+.detailtopic{
+  font-family: 'Electrolize';
+  font-size: 19px;
+  font-weight: 00;
   color: white;
   flex: 3;
   margin-top: 10px;
@@ -124,17 +146,61 @@ html, body {
   /* background-color: rgba(0, 128, 128, 0.795); */
 }
 
+.detailset{
+  flex: 1;
+  opacity: 0;
+  /* background-color: teal; */
+  margin: 0px;
+  flex-direction: column;
+  align-items: center;
+  animation: detail 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.detailset.one{animation-delay: 2.5s;}
+.detailset.two{animation-delay: 3s;}
+.detailset.three{animation-delay: 3.5s;}
+
+@keyframes detail{
+  
+  0%{margin: 0px; opacity: 0;}
+  100%{margin:10px; opacity: 1;}
+}
+
+.detailq{
+  flex: 1;
+  /* background-color: rgba(0, 128, 128, 0.795); */
+  margin: 10px;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+}
+
 .nameinfo{
-  font-family: 'Montserrat', sans-serif;
+  opacity: 0;
+  font-family: 'Montserrat';
   font-size: 14px;
   font-weight: 500;
   color: white;
   flex: 10;
   align-items: center;
   /* background-color: rgba(0, 128, 128, 0.795); */
-  margin-top: 10px;
+  margin-top: 0px;
+  animation:opac 0.5s;
+  animation-fill-mode: forwards;
+  animation-delay: 2s;
 }
 
+.detailinfo{
+  font-family: 'Montserrat';
+  font-size: 17px;
+  font-weight: 500;
+  color: white;
+  flex: 1;
+  align-items: center;
+  /* background-color: rgba(0, 128, 128, 0.795); */
+  margin-top: 10px;
+}
 
 
 .dropdown{
@@ -257,17 +323,26 @@ html, body {
 
 .profile{
   flex: 1;
-  /* background-color: rgba(0, 128, 128, 0.795); */
+  background-color: rgba(0, 0, 0, 0.185);
+  display: flex;
+  flex-direction: row;
+}
+
+.details{
+  flex: 1;
+  /* background-color: rgba(0, 0, 0, 0.185); */
   display: flex;
   flex-direction: row;
 }
 
 .profile-info{
+  /* opacity: 0; */
   margin: 10px;
   margin-top: 30px;
   flex: 1;
   display: flex;
   flex-direction: column;
+
 }
 
 .profile-photo{
@@ -280,20 +355,98 @@ html, body {
   margin: 20px;
   z-index: -9;
   /* animation: bounce-4 2s linear; */
+  animation:opac-phot 1.5s;
+  animation-timing-function: ease-out;
   float: left;
 }
 
+@keyframes opac-phot {
+  0%       {opacity: 0; }
+  100%     {opacity: 1;}
+}
 
-@keyframes bounce-4 {
-  0%   { transform: scale(1,1)    translateY(0); }
-  10%  { transform: scale(1.1,.9) translateY(0); }
-  30%  { transform: scale(.9,1.1) translateY(-100px); }
-  50%  { transform: scale(1,1)    translateY(0); }
-  100% { transform: scale(1,1)    translateY(0); }
+@keyframes opac {
+  0%       {opacity: 0; margin:0px; }
+  100%     {opacity: 1; margin:10px;}
+}
+
+@keyframes bounce {
+  0%       {margin-top: 15px; opacity: 0;}
+  25%, 75% { margin-top: 25px; }
+  50%      {margin-top: 20px; }
+  100%     {margin-top: 20px; opacity: 1;}
 }
 
 
+.divider{
+  background-color: rgba(255, 255, 255, 0.452);
+  height: 4px;
+  width: 90%;
+  border: 0px;
+  flex: 1;
+  margin-left: 5%;
+  margin-right: 5%;
+  animation: opac 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 4s;
+  opacity: 0;
+}
 
+.skills{
+  background-color: teal;
+  flex-direction: column ;
+  display: flex;
+}
+
+.skilltitle{
+  font-family: 'Electrolize';
+  font-size: 30px;
+  font-weight: 600;
+  color: white;
+  flex: 3;
+  align-items: center;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+.skilltags{
+  display: flex;
+  flex-direction: column;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.tagline{
+  display: flex;
+  flex-direction: row;
+}
+
+.w3-tag{
+  font-family: 'Montserrat';
+  font-weight: 500 ;
+  margin: 5px;
+  width: fit-content;
+  padding: 2px;
+  -webkit-box-shadow: 4px 5px 20px -7px rgba(0,0,0,0.75);
+-moz-box-shadow: 4px 5px 20px -7px rgba(0,0,0,0.75);
+box-shadow: 4px 5px 20px -7px rgba(0,0,0,0.75);
+  /* background-color: darkslategray; */
+  transition: 0.1s ease-in;
+  flex: 1;
+}
+
+
+.w3-tag:hover{
+  transform: scale(1.05);
+}
+
+.skilllink{
+  text-decoration: none;
+}
+.skilllink:hover{
+  text-decoration: none;
+  color: #222222;
+}
 
 @media only screen and (max-width: 600px) {
   .dropdown {
@@ -304,9 +457,39 @@ html, body {
     align-items: center;
     justify-content: center;
   }
-  .profile-info{
+    .profile-info{
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    text-align: center;
   }
-}
 
+  .details{
+    flex-direction: column;
+  }
+
+  .w3-tag{
+    margin: 3px;
+    font-size: 12px;
+    flex: 1;
+  }
+
+  .skilltags{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .segement{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .tagline{
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: stretch;
+  }
+
+}
