@@ -13,7 +13,22 @@ html, body {
     background-position: center center;
     background-attachment: fixed;
     background-size: cover;
+    scrollbar-width: thin;          /* "auto" or "thin"  */
+    scrollbar-color: rgba(255, 255, 255, 0.336)  teal;   /* scroll thumb & track */ 
 }
+
+body::-webkit-scrollbar {
+  width: 12px;               /* width of the entire scrollbar */
+}
+body::-webkit-scrollbar-track {
+  background: teal;        /* color of the tracking area */
+}
+body::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.336) ;    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  border: 3px solid teal;  /* creates padding around scroll thumb */
+}
+
 
 .material-icons {
   font-family: 'Material Icons';
@@ -64,6 +79,8 @@ html, body {
     left: 1%;
   }
 }
+
+
 .material-icons.btn { 
   font-size: 40px; 
   flex: 1;
@@ -249,9 +266,9 @@ html, body {
 }
 
 .fas{
-  font-size: 0px;
+  font-size: 60px;
   color: white;
-  opacity: 0;
+  opacity: 1;
 }
 
 .fab:hover{color:  rgba(88, 194, 150, 1); transition: 0.5s;}
@@ -406,7 +423,7 @@ html, body {
   flex: 3;
   align-items: center;
   margin-top: 10px;
-  margin-left: 20px;
+  margin-left: 50px;
 }
 
 .skilltags{
@@ -414,6 +431,7 @@ html, body {
   flex-direction: column;
   margin-left: 50px;
   margin-right: 50px;
+  margin-bottom: 30px;
 }
 
 .tagline{
@@ -447,6 +465,75 @@ box-shadow: 4px 5px 20px -7px rgba(0,0,0,0.75);
   text-decoration: none;
   color: #222222;
 }
+
+
+
+
+.timelinesec{
+ 
+  background-color: rgb(0, 109, 109);
+  flex-direction: row ;
+  display: flex;
+}
+
+.education{
+  margin-top: 30px;
+  flex: 1;
+  flex-direction: column ;
+  display: flex;
+}
+
+.line{
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  margin-top: 10px;}
+
+.timedetails{
+  display: flex;
+  flex-direction: column;
+  flex: 15;
+}
+
+.bullet{
+  margin: 0px 20px 0px 50px;
+  flex: 1;
+  text-align: center;
+  align-items: center ;
+}
+
+.material-icons.bullet { 
+  font-size: 50px; 
+  flex: 1;
+  color: white;
+  /* top: -10%; */
+  margin: 10px;
+  transition: 0.1s ease;
+  transform-origin: center center;
+  margin-right: 20px;
+}
+
+
+.timedetail{
+  /* opacity: 0; */
+  margin-top: 10px;
+  font-family: 'Electrolize';
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+  flex: 1;
+}
+
+.timeyears{
+  /* opacity: 0; */
+  font-family: 'Montserrat';
+  font-size: 14px;
+  font-weight: 500;
+  color: white;
+  flex: 1;
+  align-items: center;
+}
+
 
 @media only screen and (max-width: 600px) {
   .dropdown {
@@ -491,5 +578,19 @@ box-shadow: 4px 5px 20px -7px rgba(0,0,0,0.75);
     text-align: center;
     align-items: stretch;
   }
+
+  .nameinfo{
+    align-items: center;
+    text-align: justify;
+    text-justify: inter-word;
+text-align-last:center;
+
+  }
+
+  .skilltitle{ margin-left: 20px;}
+
+.timelinesec{
+  flex-direction: column;
+}
 
 }
