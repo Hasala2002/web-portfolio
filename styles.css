@@ -490,7 +490,7 @@ box-shadow: 4px 5px 20px -7px rgba(0,0,0,0.75);
   margin: 10px 50px 10px 50px;
  /* background-color: rgb(0, 90, 90); */
  transition: 0.5s;
- opacity: 0.8;
+ opacity: 0.9;
 }
 
 .timedetails{
@@ -556,32 +556,6 @@ box-shadow: 4px 5px 20px -7px rgba(0,0,0,0.75);
   /* background-color: rgba(255, 255, 255, 0.301); */
 }
 
-
-
-
-
-.alertcover{
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  /* opacity: 0; */
-  display: none;
-  background-color: rgba(00, 00, 00, 0.4);
-  z-index: 999;
-  text-align: center;
-}
-
-.alert{
-  position: relative;
-  left: 25%;
-  top: 100px;
-  width: 50%;
-  height: 400px;
-  background-color: teal;
-}
-/* .education > .skilltitle {
-  pointer-events: auto;
-} */
 
 @media only screen and (max-width: 600px) {
 .alert{

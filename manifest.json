@@ -1,0 +1,19 @@
+{
+	"dir" : "ltr",
+	"lang" : "ro",
+	"name" : "Web Portofolio",
+	"scope" : "/web-portofolio/",
+	"display" : "browser",
+	"start_url" : "https://hasala2002.github.io/web-portofolio/",
+	"short_name" : "Web Portofolio",
+	"theme_color" : "transparent",
+	"description" : "A Simple Portofolio about Hasala Heiyanthuduwa",
+	"orientation" : "any",
+	"background_color" : "transparent",
+	"related_applications" : [],
+	"prefer_related_applications" : false,
+	"icons" : [],
+	"url" : "https://hasala2002.github.io/web-portofolio/",
+	"screenshots" : [],
+	"generated" : "true"
+}
