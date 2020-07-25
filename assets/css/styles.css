@@ -23,6 +23,11 @@ html,body{
     scroll-behavior: smooth;
     /* scroll-snap-type: y mandatory; */
     overflow-y: hidden;
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
 }
 
 a{
@@ -831,7 +836,7 @@ textarea:focus{
     text-align: center;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
     .mainhome{
         flex-direction: column;
     }
@@ -925,5 +930,15 @@ textarea:focus{
     }
     .topic{
         font-size: 12px;
+    }
+    .designation::after{
+        font-size:35px
+    }
+    .start{
+        padding-top:30% ;
+    }
+    .descript{
+        margin-top: 10%;
+        margin-bottom: 20%;
     }
 }

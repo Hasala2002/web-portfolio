@@ -1,5 +1,5 @@
 function test(){
-    alert("works");
+    alert("form still under construction");
 }
 
 function nav1in(btn){
