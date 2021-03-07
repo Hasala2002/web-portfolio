@@ -130,7 +130,7 @@ a{
     /* margin-top:75%;  */
 }
 
-.fa:hover{
+.fab:hover{
   color: #08fcd7;
 }
 
@@ -941,4 +941,44 @@ textarea:focus{
         margin-top: 10%;
         margin-bottom: 20%;
     }
+}
+
+.bomappss{
+    background-image: url('../img/projects/bom.png');
+    background-size: cover;
+}
+
+.evess{
+    background-image: url('../img/projects/eve.png');
+    background-size: cover;
+}
+
+.catalystss{
+    background-image: url('../img/projects/catalyst.png');
+    background-size: cover;
+}
+
+.pantherass{
+    background-image: url('../img/projects/panthera.png');
+    background-size: cover;
+}
+
+.chronosss{
+    background-image: url('../img/projects/chronos.png');
+    background-size: cover;
+}
+
+.snakess{
+    background-image: url('../img/projects/snake.png');
+    background-size: cover;
+}
+
+.riviss{
+    background-image: url('https://via.placeholder.com/256x256.png?text=Image+Hidden');
+    background-size: cover;
+}
+
+.jewelss{
+    background-image: url('https://via.placeholder.com/256x256.png?text=Image+Hidden');
+    background-size: cover;
 }
