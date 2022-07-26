@@ -1,0 +1,32 @@
+{
+  "name": "@hasala2002/create-react-parcel",
+  "version": "1.0.0",
+  "description": "Parcel // React Boilerplate",
+  "source": "/src/index.html",
+  "bin": "./bin/cli.js",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "author": "Hasala Heiyanthuduwa",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Hasala2002/create-react-parcel.git"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.6.2",
+    "parcel": "^2.6.2",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "framer-motion": "^6.5.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.4.0",
+    "react-images": "^1.2.0-beta.7",
+    "react-photo-gallery": "^8.0.0",
+    "react-router-dom": "^6.3.0",
+    "sass": "^1.53.0"
+  }
+}
