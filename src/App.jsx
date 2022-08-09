@@ -1,10 +1,10 @@
 import Layout from "./utilities/Layout"
 import AnimatedRoutes from "./utilities/AnimatedRoutes"
 
-const App = () => {
+const App = ({navState, setRespNavState}) => {
   return (
-    <div className="App">
-      <Layout>
+    <div className={`App ${navState ? 'open' : ''}`}>
+      <Layout setRespNavState={setRespNavState} navState={navState}>
         <AnimatedRoutes />
       </Layout>
     </div>

@@ -79,3 +79,19 @@
         }
     }
 }
+
+
+@media screen and (max-width: 820px) {
+    .workGrid{
+        justify-content: center;
+    }
+    .workPage{
+        padding: 0 50px 100px 50px;
+        .workBox{
+            min-width: 290px !important;
+            .workPreview{
+                min-width: unset !important;
+            }
+        }
+    }
+}

@@ -24,12 +24,82 @@ body{
     overflow-x: hidden;
 }
 
+.App.open{
+    margin-left: -75px;
+}
+
+.respNav{
+    position: fixed;
+    width: 75px;
+    height: 100vh;
+    background-color: $main-font-color;
+    z-index: 99;
+    right: 0;
+    transform: translateX(100%);
+    transform-origin: right center;
+    transition: 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    padding: 0px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.respNav.open{
+    right: 0px;
+    transform: translateX(0);
+}
+
+.respNavToggleButton{
+    color: #fff;
+    font-size: 2em;
+    width: 100%;
+    height: 125px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.respNav{
+    overflow-y: auto;
+    overflow-x: hidden;
+    .links{
+        display: flex;
+        flex-direction: column;
+        flex: 0.8;
+        justify-content: space-evenly;
+    div{
+        color:#fff;
+        font-weight: bold;
+        text-transform: uppercase;
+        display: flex;
+        justify-content: center;
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+        // transform: rotate(90deg);
+        cursor: pointer;
+    }
+}
+}
+
+@media screen and (min-width: 820px) {
+    .App.open{
+        margin-left: 0px !important;
+    }
+
+    .respNav.open{
+        right: 0px;
+        transform: translateX(100%) !important;
+    }    
+}
+
 .App{
     width: 100%;
     height: fit-content;
     position: relative;
     display: flex;
     flex-direction: column;
+    transition: margin-left 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     .nav{
         width: 100%;
         max-width: 1366px;
@@ -60,6 +130,13 @@ body{
                 font-size: 1.25em;
                 display: none;
                 cursor: pointer;
+                opacity: 1;
+                transition: margin-left 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            }
+
+            .res-nav-toggle.open{
+                opacity: 0;
+                pointer-events: none;
             }
 
             .nav-link{
@@ -203,16 +280,23 @@ footer{
 }
 
 @media screen and (max-width: 820px) {
+
+    // .App{
+    //     transform: translateX(-50px);
+    // }
+
     .blob{
         left: -1120px; 
     }
-    .App .nav .nav-links{
-        .res-nav-toggle{
-            display: flex;
-        }
+    .App .nav {
+        .nav-links{
+            .res-nav-toggle{
+                display: flex;
+            }
 
-        .nav-link{
-            display: none;
+            .nav-link{
+                display: none;
+            }
         }
     }
 }

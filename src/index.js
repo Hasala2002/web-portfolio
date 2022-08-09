@@ -4,6 +4,8 @@ import App from "./App";
 import './index.scss';
 import { BrowserRouter } from "react-router-dom";
 import ScrollToTop from "./utilities/ScrollToTop";
+import RespNavigation from "./utilities/RespNavigation";
+import ApplicationWrapper from "./ApplicationWrapper";
 
 const root = ReactDOM.createRoot(
     document.getElementById("root")
@@ -13,7 +15,7 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <ScrollToTop>
-        <App />
+        <ApplicationWrapper />
       </ScrollToTop>
     </BrowserRouter>
   </React.StrictMode>
