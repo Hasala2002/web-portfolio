@@ -1,7 +1,7 @@
 .shop{
     width: 100%;
     height: 100%;
-    padding: 15px 15px 0 15px;
+    // padding: 15px 15px 0 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -29,6 +29,7 @@
         width: 30px;
         height: 5px;
         background-color: #a7a7a7;
+        border-radius: 5px;
     }
     div:nth-child(2){
         background-color: #EBCB53;
@@ -92,6 +93,7 @@
         .tag{
             padding: 2.5px 5px;
             background-color: #FEE4CB;
+            color: #080C0C;
             border-radius: 20px;
         }
     }

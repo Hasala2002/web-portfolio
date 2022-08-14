@@ -15,7 +15,7 @@ const GraphicWorkDisplay = () => {
       setCurrentImage(index);
       setViewerIsOpen(true);
     }, []);
-  
+   
     const closeLightbox = () => {
       setCurrentImage(0);
       setViewerIsOpen(false);

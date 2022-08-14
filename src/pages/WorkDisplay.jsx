@@ -3,6 +3,7 @@ import styles from './styles/WorkDisplay.module.scss'
 import { WorkDB } from '../utilities/Data.js'
 import { useParams, useNavigate, Link } from "react-router-dom";
 import { useEffect, useState } from 'react';
+import WorkPreview from './WorkPreview';
 
 const WorkDisplay = () => {
 
@@ -11,6 +12,8 @@ const WorkDisplay = () => {
 
     const [workTitle,setWorkTitle] = useState("")
     const [workList,setWorkList] = useState([])
+
+    const [selectedWork,setSelectedWork] = useState(undefined)
 
     useEffect(()=>{
         if(WorkDB[`${workType}`]===undefined) {
@@ -22,17 +25,20 @@ const WorkDisplay = () => {
         setWorkList(WorkDB[`${workType}`].work)
     },[])
 
+
+
   return (
     <PageWrapper>
         <div className={styles.workPage}>
             <h1><Link to="/work">[Selected] Work</Link> &gt; {workTitle}</h1>
             <div className={styles.notimp}>Cool stuff eh? (˃́ᗜ˂̀`)</div>
-            <div className={styles.workGrid}>
+            <div className={styles.work}>
+            <div className={`${styles.workGrid} ${selectedWork ? styles.workGridOpen : ''}`}>
                 {
                     workList && workList.map(work => {
                         return(
-                            <div className={styles.workBox} key={work.title}>
-                                <div className={styles.workCard}>
+                            <div onClick={()=>{setSelectedWork(work)}} className={`${styles.workBox} ${selectedWork ? styles.workBoxOpen : ''}`} key={work.title}>
+                                <div className={`${styles.workCard} ${selectedWork ? styles.workCardOpen : ''}`}>
                                     <span>{work.title}</span>
                                     <div style={{backgroundImage: `url(${work.img})`}} className={styles.workPreview}>
                                     </div>
@@ -41,13 +47,10 @@ const WorkDisplay = () => {
                         )
                     })
                 }
-                {/* <div className={styles.workBox}>
-                    <div className={styles.workCard}>
-                        <span>Full Stack Projects</span>
-                        <div data-id="fullstack" className={styles.workPreview}>
-                        </div>
-                    </div>
-                </div> */}
+                </div>
+                <div className={`${styles.workPreviewSection} ${selectedWork ? styles.workPreviewSectionOpen : ''}`}>
+                    {selectedWork && <WorkPreview work={selectedWork} setWork={setSelectedWork} />}
+                </div>
             </div>
         </div>
     </PageWrapper>

@@ -1,5 +1,41 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
 
+:root {
+    --main-bg-color: #F3F6FD;
+    --sub-bg-color: #FEFEFE;
+    --mid-bg-color: #FFF;
+    --resp-nav-bg: #1C2129;
+    --resp-nav-font: #D9DDDF;
+    --main-font-color: #1f1c2e;
+    --sub-font-color: #a2a3a3;
+    --switcher-bg: #fff;
+    --shadow-color: #rgba(0, 0, 0, 0.15);
+    --color-text: #a2a3a3;
+    --color-text-active: #1f1c2e;
+    --color-arrow: #656565;
+
+    --button-bg: #1C2129;
+    --button-font: #fff;
+}
+
+[data-theme="dark"]{
+    --main-bg-color: #080C0C;
+    --sub-bg-color: #111419;
+    --mid-bg-color: #1C2129;
+    --resp-nav-bg: #1C2129;
+    --resp-nav-font: #D9DDDF;
+    --main-font-color: #D9DDDF;
+    --sub-font-color: #fff;
+    --switcher-bg: #111419;
+    --shadow-color: #rgba(0, 0, 0, 0.15);
+    --color-text: #1C2129;
+    --color-text-active: #D9DDDF;
+    --color-arrow: #88888852;
+
+    --button-bg: #1C2129;
+    --button-font: #fff;
+}
+
 $bg-color: #F3F6FD;
 $main-font-color: #1F1C2E;
 
@@ -10,16 +46,19 @@ $main-font-color: #1F1C2E;
     font-family: 'DM Sans', sans-serif;
     z-index: 2;
     scroll-behavior: smooth;
+    // transition: background-color 400ms cubic-bezier(0.995, -0.265, 0.855, 0.505);
 }
 
 html,body,#root{
     width: 100%;
     height: 100%;
     color: $main-font-color;
+    color: var(--main-font-color);
 }
 
 body{
     background-color: $bg-color;
+    background-color: var(--main-bg-color);
     overflow-y: scroll;
     overflow-x: hidden;
 }
@@ -32,7 +71,7 @@ body{
     position: fixed;
     width: 75px;
     height: 100vh;
-    background-color: $main-font-color;
+    background-color:   var(--resp-nav-bg);
     z-index: 99;
     right: 0;
     transform: translateX(100%);
@@ -50,7 +89,7 @@ body{
 }
 
 .respNavToggleButton{
-    color: #fff;
+    color: var(--resp-nav-font);
     font-size: 2em;
     width: 100%;
     height: 125px;
@@ -69,7 +108,7 @@ body{
         flex: 0.8;
         justify-content: space-evenly;
     div{
-        color:#fff;
+        color: var(--resp-nav-font);
         font-weight: bold;
         text-transform: uppercase;
         display: flex;
@@ -144,6 +183,7 @@ body{
                 position: relative;
                 text-decoration: none;
                 color: $main-font-color;
+                color: var(--main-font-color);
             }
 
             .nav-link:after {    
@@ -155,6 +195,7 @@ body{
                 left: 50%;
                 position: absolute;
                 background: $main-font-color;
+                background: var(--main-font-color);
                 transition: width 0.3s ease 0s, left 0.3s ease 0s;
                 width: 0;
               }
@@ -220,6 +261,7 @@ footer{
         font-size: 1.75em;
         margin: 25px 0 50px;
         *{
+            color: var(--main-font-color);
             cursor: pointer;
         }
     }
@@ -256,8 +298,8 @@ footer{
         text-decoration: none;
         width: fit-content;
         padding: 10px 20px;
-        background-color: $main-font-color;
-        color: white;
+        background-color: var(--button-bg);
+        color: var(--button-font);
         border-radius: 50px;
     }
 }
@@ -314,3 +356,70 @@ footer{
 //     margin-bottom: 50px;
 //     padding-bottom: 50px;
 // }
+
+.blobSVG{
+    fill: var(--sub-bg-color);
+}
+
+.switcher {
+    user-select: none;
+    cursor: pointer;
+    padding: 16px;
+    border-radius: 16px;
+    box-shadow: 0px 0px 20px -2px var(--shadow-color);
+    background: var(--switcher-bg);
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 999;
+    transition: background-color 400ms cubic-bezier(0.995, -0.265, 0.855, 0.505),
+                box-shadow 100ms linear;
+    
+    &:hover {
+      box-shadow: 0px 0px 30px -2px var(--shadow-color);
+    }
+    div{
+        display: flex;
+        align-items: center;
+    }
+      
+    .arrow {
+      margin: 0px 20px;
+      color: var(--color-arrow);
+      transition: all 400ms cubic-bezier(0.995, -0.265, 0.855, 0.505);
+    }
+    
+    input[type=checkbox] {
+      height: 0;
+      width: 0;
+      display:none;
+      
+      +div>i {
+        transition: all 400ms cubic-bezier(0.995, -0.265, 0.855, 0.505);
+        display: flex;
+        align-items: center;
+        color: var(--color-text);
+      }
+      
+      &:checked {
+        +div {
+          .arrow {
+            transform: rotate(-180deg);
+          }
+          
+          >:last-child {
+            color: var(--color-text-active);
+          }
+        }
+      }
+      
+      &:not(:checked) {
+        +div {
+          >:first-child {
+              color: var(--color-text-active);
+          }
+        }
+      }
+    }
+  
+  }

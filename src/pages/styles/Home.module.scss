@@ -57,7 +57,7 @@
         min-width: 300px;
         border-radius: 30px;
         aspect-ratio: 4/5;
-        background-color: white; 
+        background-color: var(--mid-bg-color); 
         transform-style: preserve-3d;
         transform: rotateX(35deg)rotateY(345deg)rotateZ(20deg);
         box-shadow: 0 0px 10px rgba(0, 0, 0, 0.05);

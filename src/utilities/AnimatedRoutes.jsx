@@ -8,6 +8,7 @@ import NotFound from "../pages/NotFound";
 import Skills from "../pages/Skills";
 import GraphicWorkDisplay from "../pages/GraphicWorkDisplay";
 import Contact from "../pages/Contact";
+import About from "../pages/About";
 
 export default function AnimatedRoutes(){
 
@@ -22,6 +23,7 @@ export default function AnimatedRoutes(){
           <Route path="work/graphicdesign" element={<GraphicWorkDisplay />} />
           <Route path="work/:workType" element={<WorkDisplay />} />
           <Route path="skills" element={<Skills />} />
+          <Route path="about" element={<About />} />
           <Route path="contact" element={<Contact />} />
       </Routes>
     </AnimatePresence>

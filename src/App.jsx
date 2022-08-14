@@ -1,4 +1,4 @@
-import Layout from "./utilities/Layout"
+import { Layout } from "./utilities/Layout"
 import AnimatedRoutes from "./utilities/AnimatedRoutes"
 
 const App = ({navState, setRespNavState}) => {
