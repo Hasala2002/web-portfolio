@@ -34,6 +34,7 @@ const WorkPreview = ({work,setWork}) => {
         <img className={styles.articleImg} src={work.img} alt="Work" />
         <span className={styles.title}>description</span>
         <p>{work.desc}</p>
+        <p><i>{work.time}</i></p>
         <span className={styles.title}>technologies used</span>
         <div className={styles.tags}>
             {work.tags && work.tags.map(tag => {
