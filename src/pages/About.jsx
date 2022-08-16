@@ -16,7 +16,7 @@ const About = () => {
                     <img src={profile} alt="profile" />
                 </div>
                 <div className={styles.paras}>
-                <p className={styles.first}>I've been coding and programming for 8+ years and dabbled in a lot different technologies, and had the opportunity to work in an amazing ICT society at my school, where I got to apply, improve and evolve my skills in Programming, Web Design & Development and UI/UX Designs.</p>
+                <p className={styles.first}>I've been coding and programming for 8+ years and dabbled in a lot different technologies, and had the opportunity to work in an amazing ICT society at my school in Sri Lanka, where I got to apply, improve and evolve my skills in Programming, Web Design & Development and UI/UX Designs.</p>
                 <p>These days I spent my time at college while I work on code and design skills .</p>
                 <p>Outside of work, you'd probably find me playing Minecraft, or watching random TV shows.</p>
                 <p>I also do freelance work occasionally.</p>

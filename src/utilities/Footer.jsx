@@ -14,7 +14,7 @@ const Footer = () => {
             <a href="https://behance.net/gallery/135267581/Portfolio" target="_blank"><SiBehance /></a>
             <a href="https://linkedin.com/in/hasala-heiyantuduwa-748639187/" target="_blank"><SiLinkedin /></a>
        </div>
-       <span className="disclaimer">Made by me. ٩(˘◡˘)۶</span>
+       <div className="disclaimer with-tooltip" data-tooltip-content="Well, Obviously...">Made by me. ٩(˘◡˘)۶</div>
     </footer>
   )
 }

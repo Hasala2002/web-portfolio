@@ -37,7 +37,10 @@ const WorkDisplay = () => {
                 {
                     workList && workList.map(work => {
                         return(
-                            <div onClick={()=>{setSelectedWork(work)}} className={`${styles.workBox} ${selectedWork ? styles.workBoxOpen : ''}`} key={work.title}>
+                            <div onClick={()=>{
+                                setSelectedWork(work)
+                                window.scrollTo(0, 0);
+                                }} className={`${styles.workBox} ${selectedWork ? styles.workBoxOpen : ''}`} key={work.title}>
                                 <div className={`${styles.workCard} ${selectedWork ? styles.workCardOpen : ''}`}>
                                     <span>{work.title}</span>
                                     <div style={{backgroundImage: `url(${work.img})`}} className={styles.workPreview}>
