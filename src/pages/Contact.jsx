@@ -11,7 +11,7 @@ const Contact = () => {
             <form action="https://formsubmit.co/hhasala2002@gmail.com" method="POST">
                 <input type="hidden" name="_next" value="https://hasala2002.netlify.app/contact" />
                 <input type="hidden" name="_subject" value="New submission!" />
-                <input type="text" name="_honey" style="display:none" />
+                <input type="text" name="_honey" style={{display: "none"}} />
                 <div className={styles.inputs}>
                     <div className={styles.input}>
                         <label htmlFor="name">Full Name</label>
