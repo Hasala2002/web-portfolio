@@ -8,7 +8,7 @@ const Contact = () => {
         <div className={styles.contactPage}>
             <h1>Get in touch.</h1>
             <div className={styles.notimp}>Love to hear from you! („• ᴗ •„)</div>
-            <form action="https://formsubmit.co/hhasala2002@gmail.com" method="POST">
+            <form action="https://formsubmit.co/4b72abe7bde050d0c75c609feebab7d9" method="POST">
                 <input type="hidden" name="_next" value="https://hasala2002.netlify.app/contact" />
                 <input type="hidden" name="_subject" value="New submission!" />
                 <input type="text" name="_honey" style={{display: "none"}} />
