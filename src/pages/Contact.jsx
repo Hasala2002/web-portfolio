@@ -8,7 +8,10 @@ const Contact = () => {
         <div className={styles.contactPage}>
             <h1>Get in touch.</h1>
             <div className={styles.notimp}>Love to hear from you! („• ᴗ •„)</div>
-            <form action="">
+            <form action="https://formsubmit.co/hhasala2002@gmail.com" method="POST">
+                <input type="hidden" name="_next" value="https://hasala2002.netlify.app/contact" />
+                <input type="hidden" name="_subject" value="New submission!" />
+                <input type="text" name="_honey" style="display:none" />
                 <div className={styles.inputs}>
                     <div className={styles.input}>
                         <label htmlFor="name">Full Name</label>
@@ -21,7 +24,7 @@ const Contact = () => {
                 </div>
                 <div className={styles.messageSection}>
                 <label htmlFor="message">Message</label>
-                <textarea name="message" placeholder="Type out your message here..."></textarea>
+                <textarea name="message" type="text" placeholder="Type out your message here..."></textarea>
                 </div>
                 <button type="submit">Sumbit Message</button>
             </form>
