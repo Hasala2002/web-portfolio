@@ -1,3 +1,4 @@
+
 .aboutPage{
     width: 100%;
     padding: 0 50px 100px 50px;
@@ -41,7 +42,7 @@
     width: 100%;
     display: flex;
     background-color: var(--mid-bg-color);
-    border: 5px solid #3b5bdb;
+    border: 5px solid var(--about-accent);
     align-items: center;
     margin-top: 50px;
     padding: 50px;
@@ -52,16 +53,16 @@
     .heroTitle{
         font-weight: bold;
         font-size: 2em;
-        color: #3b5bdb;
+        color: var(--about-accent);
     }
     .content{
         width: 40%;
         opacity: 0.8;
     }
     a{
-        border: 2px solid #3b5bdb;
+        border: 2px solid var(--about-accent);
         background-color: transparent;
-        color: #3b5bdb;
+        color: var(--about-accent);
         padding: 10px 20px;
         border-radius: 10px;
         font-size: 1em;
@@ -73,6 +74,19 @@
         align-items: center;
         gap: 10px;
         text-decoration: none;
+    }
+}
+
+.holopin{
+    width: 100%;
+    display: grid;
+    place-items: center;
+    margin-top: 50px;
+    border-radius: 10px;
+    overflow: hidden;
+    img{
+        width: 90%;
+        border-radius: 10px;
     }
 }
 

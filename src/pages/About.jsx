@@ -27,6 +27,9 @@ const About = () => {
               <div className={styles.content}>but finding it difficult to get started? Let me help you with the nitty gritty technical work.</div>
               <Link to="/contact">Let's talk <IoRocket /></Link>
             </div>
+            <a href="https://holopin.io/@hasala2002" className={styles.holopin}>
+            <img src="https://holopin.me/hasala2002" alt="@hasala2002's Holopin board" />
+            </a>
         </div>
     </PageWrapper>
   )
