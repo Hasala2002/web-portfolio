@@ -29,7 +29,7 @@ export const WorkDB = {
                 img:catalyst,
                 desc: "CATALYST.LMS Learning Management System is an easy-to-use LMS designed for easy management of online classes and assignments, for both the teachers and the students. We hope to create a free flowing UI/UX that improves the efficiency and speed of work done by online schools. It was built by a team of 5 for School Hackathon",
                 tags: ["node js","react","redux","firebase"],
-                links: ["https//untitledlms-5029c.web.app/"],
+                links: ["https://untitledlms-5029c.web.app"],
                 time: "Oct 2020"
             },
             {
@@ -67,7 +67,7 @@ export const WorkDB = {
                 img: arke,
                 desc: "With Arkē Chat you can create your own disposable chatroom, invite other people to chat with you and not worry about anyone else snooping into your conversation. Nothing is saved.",
                 tags: ["node js","ejs","socket io","peer js"],
-                links: ["https://arkechat.herokuapp.com/"],
+                links: ["https://arkechat.herokuapp.com/","https://github.com/Hasala2002/arke"],
                 time: "Jun 2021 - present"
             }
         ]
@@ -104,7 +104,7 @@ export const WorkDB = {
                 img: arke,
                 desc: "With Arkē Chat you can create your own disposable chatroom, invite other people to chat with you and not worry about anyone else snooping into your conversation. Nothing is saved.",
                 tags: ["node js","ejs","socket io","peer js"],
-                links: ["https://arkechat.herokuapp.com/"],
+                links: ["https://arkechat.herokuapp.com/","https://github.com/Hasala2002/arke"],
                 time: "Jun 2021 - present"
             },
         ]
@@ -209,6 +209,9 @@ import gatsby from '../img/skills/gatsby.png'
 import github from '../img/skills/github.png'
 import html from '../img/skills/html.png'
 import js from '../img/skills/js.png'
+import jquery from '../img/skills/jquery.png'
+import socket from '../img/skills/socket.png'
+import python from '../img/skills/python.png'
 import node from '../img/skills/node.png'
 import parcel from '../img/skills/parcel.png'
 import react from '../img/skills/react.png'
@@ -231,8 +234,16 @@ export const Skills = [
         img: js
     },
     {
+        title: "JQUERY",
+        img: jquery
+    },
+    {
         title: "NODE JS",
         img: node
+    },
+    {
+        title: "SOCKET IO",
+        img: socket
     },
     {
         title: "REACT",
@@ -265,6 +276,10 @@ export const Skills = [
     {
         title: "SQL/GRAPHQL",
         img: sql
+    },
+    {
+        title: "PYTHON",
+        img: python
     },
     {
         title: "PHOTOSHOP",
