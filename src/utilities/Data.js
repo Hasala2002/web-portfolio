@@ -17,6 +17,7 @@ import crtrctprcl from "../img/work/crtrctprcl.png";
 import techrev from "../img/work/techrev.png";
 import mihrealty from "../img/work/mihrealty.png";
 import costa from "../img/work/costa.png";
+import primestar from "../img/work/primestar.png";
 
 export const WorkDB = {
   fullstack: {
@@ -216,11 +217,19 @@ export const WorkDB = {
         time: "Jul 2022",
       },
       {
+        title: "PrimeStar Mortgage",
+        img: primestar,
+        desc: "Company site built for Primestar Mortgage company",
+        tags: ["wordpress"],
+        links: ["https://primestarmortgage.com"],
+        time: "Jun 2023",
+      },
+      {
         title: "COSTA",
         img: costa,
-        desc: "Company site built for Costa Volcanic Water company",
+        desc: "Company site built for Costa Spring Water company",
         tags: ["react", "parcel js", "scss"],
-        links: ["https://costavolcanicwater.com"],
+        links: ["https://costaspringwater.com"],
         time: "Jul 2022",
       },
     ],
