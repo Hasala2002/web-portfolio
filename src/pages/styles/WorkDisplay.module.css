@@ -1,0 +1,134 @@
+.workPage {
+  width: 100%;
+  padding: 0 50px 100px 50px;
+}
+.workPage h1 {
+  font-size: 2.25em;
+  margin-bottom: 10px;
+}
+.workPage h1 a {
+  text-decoration: none;
+  position: relative;
+  color: var(--main-font-color);
+}
+.workPage h1 a:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: -5px;
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: var(--main-font-color);
+}
+.workPage div.notimp {
+  margin-top: 20px;
+  opacity: 0.5;
+}
+.workPage .work {
+  display: flex;
+}
+.workPage .work .workGridOpen {
+  max-width: 300px;
+  flex-direction: column;
+  flex-wrap: unset;
+  gap: 10px;
+}
+.workPage .work .workGrid {
+  transition: width 0.25s cubic-bezier(0.995, -0.265, 0.855, 0.505);
+  width: 100%;
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+.workPage .work .workGrid .workBoxOpen {
+  width: 100%;
+}
+.workPage .work .workGrid .workBox .workCard {
+  width: 100%;
+  height: 100%;
+  background-color: var(--mid-bg-color);
+  border-radius: 20px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.25);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+.workPage .work .workGrid .workBox .workCard:hover {
+  transform: scale(1.01);
+}
+.workPage .work .workGrid .workBox .workCard span {
+  font-size: 1.25em;
+  font-weight: bold;
+}
+.workPage .work .workGrid .workBox .workCard .workPreview {
+  width: 100%;
+  min-width: 300px;
+  min-height: 180px;
+  flex: 1;
+  border-radius: 20px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.workPage .work .workGrid .workBox .workCard .workPreview[data-id=fullstack] {
+  background-image: url(../../img/fullstackprvw.png);
+}
+.workPage .work .workGrid .workBox .workCard .workPreview[data-id=uiux] {
+  background-image: url(../../img/uiuxprvw.png);
+}
+.workPage .work .workGrid .workBox .workCard .workPreview[data-id=webtools] {
+  background-image: url(../../img/webtoolsprvw.png);
+}
+.workPage .work .workGrid .workBox .workCard .workPreview[data-id=freelance] {
+  background-image: url(../../img/freelanceprvw.png);
+}
+.workPage .work .workGrid .workBox .workCardOpen {
+  background-color: unset;
+  border-radius: unset;
+  box-shadow: unset;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  max-height: 70px;
+}
+.workPage .work .workGrid .workBox .workCardOpen .workPreview {
+  display: none;
+}
+.workPage .work .workPreviewSection {
+  flex: 1;
+  margin-top: 50px;
+  padding: 0 50px;
+  display: none;
+  flex-direction: column;
+  opacity: 0;
+  transition-delay: 0.25s;
+  transition: opacity 0.25s cubic-bezier(0.995, -0.265, 0.855, 0.505);
+}
+.workPage .work .workPreviewSectionOpen {
+  display: flex;
+  opacity: 1;
+}
+
+@media screen and (max-width: 820px) {
+  .workGrid {
+    justify-content: center;
+  }
+  .workGridOpen {
+    display: none !important;
+  }
+  .workPreviewSection {
+    padding: 0px !important;
+  }
+  .workPage {
+    padding: 0 50px 100px 50px;
+  }
+  .workPage .workBox {
+    min-width: 290px !important;
+  }
+  .workPage .workBox .workPreview {
+    min-width: unset !important;
+  }
+}/*# sourceMappingURL=WorkDisplay.module.css.map */

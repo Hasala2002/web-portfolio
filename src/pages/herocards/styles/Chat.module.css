@@ -1,0 +1,108 @@
+header {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  gap: 10px;
+}
+header .profilePhoto {
+  height: 90%;
+  aspect-ratio: 1/1;
+  border-radius: 50px;
+  position: relative;
+  background-image: url("https://avatars.githubusercontent.com/u/46789216?v=4");
+  background-size: cover;
+}
+header .profilePhoto .online {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50px;
+  background-color: #0f9d58;
+  right: 5px;
+  bottom: 5px;
+  display: block;
+}
+header .profileData {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+header .profileData h3 {
+  font-size: 1.1em;
+}
+header .profileData span {
+  font-size: 0.7em;
+}
+
+.chatBox {
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  gap: 10px;
+}
+.chatBox .chatRecieve {
+  align-self: flex-start;
+  width: 90%;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  background-color: #C8F7DC;
+  color: #080C0C;
+  padding: 10px;
+  border-radius: 0 10px 10px 10px;
+}
+.chatBox .chatRecieve span {
+  font-size: 0.6em;
+}
+.chatBox .chatRecieve h3 {
+  font-size: 0.75em;
+  font-weight: normal;
+}
+.chatBox .chatSent {
+  align-self: flex-end;
+  width: 90%;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  background-color: #FEE4CB;
+  color: #080C0C;
+  padding: 10px;
+  border-radius: 10px 0 10px 10px;
+}
+.chatBox .chatSent span {
+  font-size: 0.6em;
+}
+.chatBox .chatSent h3 {
+  font-size: 0.75em;
+  font-weight: normal;
+}
+
+.chatSend {
+  width: 100%;
+  height: 15%;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  gap: 10px;
+  font-size: 1.25em;
+}
+.chatSend .chatInput {
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  box-shadow: 0 0px 10px rgba(0, 0, 0, 0.05);
+  background-color: #fff;
+  height: 100%;
+  flex: 1;
+  font-size: 0.5em;
+  border-radius: 50px;
+  color: #A7A7A7;
+}
+.chatSend .sendBtn {
+  color: #0f9d58 !important;
+}/*# sourceMappingURL=Chat.module.css.map */

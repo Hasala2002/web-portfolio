@@ -1,0 +1,85 @@
+.workPage{
+    width: 100%;
+    padding: 0 50px 100px 50px;
+    h1{
+        font-size: 2.5em;
+        margin-bottom: 50px;
+        a{
+            text-decoration: none;
+            position: relative;
+            color: var(--main-font-color);
+            &:after{
+                position: absolute;
+                content: '';
+                left: 0;
+                bottom: -5px;
+                display: block;
+                width: 100%;
+                height: 4px;
+                background-color: var(--main-font-color);
+            }
+        }
+        margin-bottom: 10px;
+    }
+    div.notimp{
+        margin: 20px 0;
+        opacity: 0.5;
+    }
+
+    .workGrid{
+        width: 100%;
+        // height: fit-content;
+        margin-top: 50px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        .workBox{
+            width: calc(50% - 40px);
+            aspect-ratio: 5/3;
+            min-width: 400px;
+            min-height: 240px;
+            .workCard{
+                width: 100%;
+                height: 100%;
+                background-color: #fff;
+                border-radius: 20px;
+                box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.25);
+                padding: 20px;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                cursor: pointer;
+                transition: .25s ease;
+                &:hover{
+                    transform: scale(1.01);
+                }
+                span{
+                    font-size: 1.5em;
+                    font-weight: bold;
+                }
+                .workPreview{
+                    width: 100%;
+                    flex: 1;
+                    background-color: #000;
+                    border-radius: 20px;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                }
+
+                .workPreview[data-id="fullstack"]{
+                    background-image: url(../../img/fullstackprvw.png);
+                }
+                .workPreview[data-id="uiux"]{
+                    background-image: url(../../img/uiuxprvw.png);
+                }
+                .workPreview[data-id="webtools"]{
+                    background-image: url(../../img/webtoolsprvw.png);
+                }
+                .workPreview[data-id="freelance"]{
+                    background-image: url(../../img/freelanceprvw.png);
+                }
+            }
+        }
+    }
+}
