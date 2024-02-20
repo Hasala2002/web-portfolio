@@ -67,7 +67,7 @@ export const WorkDB = {
                 img: arke,
                 desc: "With Arkē Chat you can create your own disposable chatroom, invite other people to chat with you and not worry about anyone else snooping into your conversation. Nothing is saved.",
                 tags: ["node js","ejs","socket io","peer js"],
-                links: ["https://arkechat.herokuapp.com/","https://github.com/Hasala2002/arke"],
+                links: ["https://arkechat.live","https://github.com/Hasala2002/arke"],
                 time: "Jun 2021 - present"
             }
         ]
@@ -104,7 +104,7 @@ export const WorkDB = {
                 img: arke,
                 desc: "With Arkē Chat you can create your own disposable chatroom, invite other people to chat with you and not worry about anyone else snooping into your conversation. Nothing is saved.",
                 tags: ["node js","ejs","socket io","peer js"],
-                links: ["https://arkechat.herokuapp.com/","https://github.com/Hasala2002/arke"],
+                links: ["https://arkechat.live","https://github.com/Hasala2002/arke"],
                 time: "Jun 2021 - present"
             },
         ]
