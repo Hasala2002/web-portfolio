@@ -18,6 +18,8 @@ import techrev from "../img/work/techrev.png";
 import mihrealty from "../img/work/mihrealty.png";
 import costa from "../img/work/costa.png";
 import primestar from "../img/work/primestar.png";
+import skylounge from "../img/work/skylounge.png";
+import koolkarni from "../img/work/koolkarni.png";
 
 export const WorkDB = {
   fullstack: {
@@ -70,6 +72,17 @@ export const WorkDB = {
         tags: ["node js", "ejs", "socket io", "peer js"],
         links: ["https://arkechat.live", "https://github.com/Hasala2002/arke"],
         time: "Jun 2021 - present",
+      },
+      {
+        title: "SkyLounge",
+        img: skylounge,
+        desc: "SkyLounge is a in-flight entertainment system built for the aviation industry which includes a multiple features targeted toward a premium user experience. It was built by a team of 4 for the TAMUHack 2025 hackathon",
+        tags: ["tauri", "typescript", "flask", "python", "react", "sqlite3"],
+        links: [
+          "https://devpost.com/software/american-airlines-in-flight-entertainment",
+          "https://github.com/Dynamic6448/tamuhack-2025",
+        ],
+        time: "Jan 2025",
       },
     ],
   },
@@ -232,6 +245,17 @@ export const WorkDB = {
         links: ["https://costaspringwater.com"],
         time: "Jul 2022",
       },
+      {
+        title: "KoolKarni Consulting",
+        img: koolkarni,
+        desc: "Company site built for KoolKarni Consulting LLC company. Design was provided by the Chamidu (Linked below) ",
+        tags: ["wordpress"],
+        links: [
+          "https://koolkarniconsulting.com/",
+          "https://www.linkedin.com/in/chamidu-amarasinghe/",
+        ],
+        time: "Jan 2025",
+      },
     ],
   },
 };
@@ -253,6 +277,10 @@ import sass from "../img/skills/sass.png";
 import sql from "../img/skills/sql.png";
 import photoshop from "../img/skills/photoshop.png";
 import dimensions from "../img/skills/dimensions.png";
+import astro from "../img/skills/astro.png";
+import flask from "../img/skills/flask.png";
+import ts from "../img/skills/ts.png";
+import turbo from "../img/skills/turbo.png";
 
 export const Skills = [
   {
@@ -266,6 +294,10 @@ export const Skills = [
   {
     title: "JS/ES",
     img: js,
+  },
+  {
+    title: "TYPESCRIPT",
+    img: ts,
   },
   {
     title: "JQUERY",
@@ -314,6 +346,18 @@ export const Skills = [
   {
     title: "PYTHON",
     img: python,
+  },
+  {
+    title: "FLASK",
+    img: flask,
+  },
+  {
+    title: "ASTRO",
+    img: astro,
+  },
+  {
+    title: "TURBO",
+    img: turbo,
   },
   {
     title: "PHOTOSHOP",
